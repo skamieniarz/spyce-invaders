@@ -1,6 +1,6 @@
 # Spyce Invaders #
 Slightly modified clone of Space Invaders classic game 
-implemented with [pyxel](https://github.com/kitao/pyxel).
+implemented with Python and [pyxel](https://github.com/kitao/pyxel).
 
 Shoot all the invaders before they reach you or destroy you!
 
