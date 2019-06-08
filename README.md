@@ -4,7 +4,7 @@ implemented with [pyxel](https://github.com/kitao/pyxel).
 
 Shoot all the invaders before they reach you or destroy you!
 
-![Demo!](url)
+![Demo!](https://github.com/skamieniarz/spyce-invaders/blob/master/demo.gif)
 
 ## Installation: ##
 
@@ -15,11 +15,11 @@ Shoot all the invaders before they reach you or destroy you!
 
 ## Controls: ##
 
-**↑** and **↓** arrow keys to select options in menus,
-**ENTER** to choose option in menus,
-**←** and **→** arrow keys to move the laser cannon left and right,
-**SPACE** to shoot the laser cannon,
-**Q** or **P** to pause the game.
+1. **↑** and **↓** arrow keys to select options in menus.
+2. **ENTER** to choose option in menus.
+3. **←** and **→** arrow keys to move the laser cannon left and right.
+4. **SPACE** to shoot the laser cannon.
+5. **Q** or **P** to pause the game.
 
 ## Features: ##
 
