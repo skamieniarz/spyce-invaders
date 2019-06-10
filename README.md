@@ -6,12 +6,15 @@ Shoot all the invaders before they reach you or destroy you!
 
 ![Demo!](https://github.com/skamieniarz/spyce-invaders/blob/master/demo.gif)
 
-## Installation: ##
+## Prerequisites: ##
 
 1. Install [Python3](https://www.python.org).
-2. Install [pyxel](https://github.com/kitao/pyxel).
-3. Clone or copy this repository.
-4. Run `python3 main.py` in the terminal while in the root of the repository.
+2. Install [pyxel](https://github.com/kitao/pyxel#how-to-install).
+3. Clone or download this repository.
+
+## Starting: ##
+Run `python main.py` or `python3 main.py` (depending on the environment) 
+in the terminal while in the root of the repository.
 
 ## Controls: ##
 
