@@ -4,13 +4,14 @@ classic game implemented with Python and [pyxel](https://github.com/kitao/pyxel)
 
 Shoot all the invaders before they reach you or destroy you!
 
-![Demo!](https://github.com/skamieniarz/spyce-invaders/blob/master/demo.gif)
+![Demo!](https://github.com/skamieniarz/spyce-invaders/blob/master/assets/demo.gif)
 
 ## Prerequisites: ##
 
-1. Install [Python3](https://www.python.org).
-2. Install [pyxel](https://github.com/kitao/pyxel#how-to-install).
-3. Clone or download this repository.
+1. Cloned or downloaded repository.
+2. [Python3](https://www.python.org) installed.
+3. [pyxel](https://github.com/kitao/pyxel#how-to-install) installed 
+(manually or by `pipenv sync` in the root of the repository).
 
 ## Starting: ##
 Run `python main.py` or `python3 main.py` (depending on the environment) 
