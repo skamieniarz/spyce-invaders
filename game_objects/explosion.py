@@ -9,7 +9,6 @@ import consts
 
 class Explosion:
     ''' Class responsible for drawing and clearing explosion flashes. '''
-
     def __init__(self):
         self.flashes = []
 

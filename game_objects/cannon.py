@@ -11,7 +11,6 @@ import consts
 class Cannon:
     ''' Class containing methods and variables related to laser cannon and
         laser beams. '''
-
     def __init__(self):
         self.lives = 3
         self.x_cord = consts.CANNON_SCREEN_MARGIN

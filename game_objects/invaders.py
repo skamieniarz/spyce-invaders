@@ -11,7 +11,6 @@ import consts
 class Invaders:
     ''' Class containing methods and variables related to invaders' wave and
         their projectiles. '''
-
     def __init__(self):
         self.units = []
         self.wave = 1
@@ -177,8 +176,8 @@ class Invaders:
             sound) if any of invaders' projectile hit the laser cannon. '''
         for projectile_index, projectile in enumerate(self.projectiles):
             if (cannon.x_cord <= projectile[0] <=
-                (cannon.x_cord + consts.CANNON_ASSET['w']) and
-                    cannon.y_cord <= projectile[1] <=
+                (cannon.x_cord + consts.CANNON_ASSET['w'])
+                    and cannon.y_cord <= projectile[1] <=
                 (cannon.y_cord + consts.CANNON_ASSET['h'])):
                 invaders.projectiles.pop(projectile_index)
                 pyxel.play(2, 0)
@@ -195,8 +194,7 @@ class Invaders:
         ''' Checks if any of the invaders reached the cannon. '''
         invaders_arrived = [
             invader[1] + consts.INVADERS_ASSETS['h'] >= cannon.y_cord
-            for invader in self.units
-            if invader[3]
+            for invader in self.units if invader[3]
         ]
         if any(invaders_arrived):
             game.state = 'end'

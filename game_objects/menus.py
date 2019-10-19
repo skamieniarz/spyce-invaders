@@ -11,7 +11,6 @@ import consts
 class Menus:
     ''' Class containing methods and variables related to game's menus like
         start, pause or score menus and navigating in them. '''
-
     def __init__(self):
         self.score = 0
         self.score_saved = False
@@ -34,8 +33,8 @@ class Menus:
         ''' Draws information regaring current amount of lives. '''
         pyxel.text(consts.LIVES_TEXT['x'], consts.LIVES_TEXT['y'], 'LIVES',
                    consts.WHITE)
-        pyxel.text(consts.LIVES_VALUE['x'], consts.LIVES_VALUE['y'], str(lives),
-                   consts.GREEN)
+        pyxel.text(consts.LIVES_VALUE['x'], consts.LIVES_VALUE['y'],
+                   str(lives), consts.GREEN)
 
     def draw_high_scores(self):
         ''' Draws top 5 scores with a date. '''
@@ -44,8 +43,9 @@ class Menus:
         for score in high_scores:
             pyxel.text(consts.TOP_TEXT['x'], consts.TOP_TEXT['y'] + margin,
                        str(score[0]), consts.WHITE)
-            pyxel.text(consts.TOP_TEXT['x'] + 80, consts.TOP_TEXT['y'] + margin,
-                       str(score[1]), consts.GREEN)
+            pyxel.text(consts.TOP_TEXT['x'] + 80,
+                       consts.TOP_TEXT['y'] + margin, str(score[1]),
+                       consts.GREEN)
             margin += 15
 
     def draw_menu_screen(self, texts):
@@ -74,8 +74,8 @@ class Menus:
             current game state and selected item. '''
         items = 3
         if game.state == 'start':
-            if pyxel.btnp(
-                    pyxel.KEY_ENTER) and self.selected_item == 1 and lives >= 1:
+            if pyxel.btnp(pyxel.KEY_ENTER
+                          ) and self.selected_item == 1 and lives >= 1:
                 game.state = 'game'
             elif pyxel.btnp(pyxel.KEY_ENTER) and self.selected_item == 2:
                 game.state = 'controls'
@@ -83,14 +83,14 @@ class Menus:
                 pyxel.quit()
         elif game.state == 'controls':
             items = 2
-            if pyxel.btnp(
-                    pyxel.KEY_ENTER) and self.selected_item == 1 and lives >= 1:
+            if pyxel.btnp(pyxel.KEY_ENTER
+                          ) and self.selected_item == 1 and lives >= 1:
                 game.state = 'game'
             elif pyxel.btnp(pyxel.KEY_ENTER) and self.selected_item == 2:
                 pyxel.quit()
         elif game.state == 'pause':
-            if pyxel.btnp(
-                    pyxel.KEY_ENTER) and self.selected_item == 1 and lives >= 1:
+            if pyxel.btnp(pyxel.KEY_ENTER
+                          ) and self.selected_item == 1 and lives >= 1:
                 game.state = 'game'
             elif pyxel.btnp(pyxel.KEY_ENTER) and self.selected_item == 2:
                 game.reset()

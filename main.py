@@ -17,16 +17,15 @@ Created by @skamieniarz (https://github.com/skamieniarz) in 2019.
 import pyxel
 
 import consts
-from cannon import Cannon
-from explosion import Explosion
-from invaders import Invaders
-from menus import Menus
-from ship import Ship
+from game_objects.cannon import Cannon
+from game_objects.explosion import Explosion
+from game_objects.invaders import Invaders
+from game_objects.menus import Menus
+from game_objects.ship import Ship
 
 
 class SpyceInvaders:
     ''' Main game class. '''
-
     def __init__(self):
         pyxel.init(consts.SCREEN_SIZE['w'],
                    consts.SCREEN_SIZE['h'],
@@ -38,7 +37,7 @@ class SpyceInvaders:
         self.menus = Menus()
         self.explosion = Explosion()
         self.state = 'start'
-        pyxel.load('spyce_invaders.pyxel')
+        pyxel.load('assets/resources.pyxel')
         pyxel.run(self.update, self.draw)
 
     def reset(self):

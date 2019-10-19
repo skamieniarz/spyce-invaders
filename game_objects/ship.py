@@ -10,7 +10,6 @@ import consts
 
 class Ship:
     ''' Class containing methods and variables related to mystery ship. '''
-
     def __init__(self):
         self.x_cord = -(consts.SHIP_ASSET['w'])
         self.y_cord = 18
