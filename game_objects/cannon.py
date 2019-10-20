@@ -35,19 +35,14 @@ class Cannon:
 
     def update_position(self):
         ''' Updates cannon's position according to pressed arrow key. '''
-        if self.x_cord <= consts.CANNON_SCREEN_MARGIN:
-            self.x_cord = consts.CANNON_SCREEN_MARGIN
-        else:
-            if pyxel.btn(pyxel.KEY_LEFT) or pyxel.btn(pyxel.GAMEPAD_1_LEFT):
-                self.x_cord -= consts.CANNON_SPEED
+        if (pyxel.btn(pyxel.KEY_LEFT) or pyxel.btn(pyxel.GAMEPAD_1_LEFT)
+            ) and self.x_cord >= consts.CANNON_SCREEN_MARGIN:
+            self.x_cord -= consts.CANNON_SPEED
 
-        if self.x_cord >= consts.SCREEN_SIZE['w'] - consts.CANNON_ASSET[
+        if (pyxel.btn(pyxel.KEY_RIGHT) or pyxel.btn(pyxel.GAMEPAD_1_RIGHT)
+            ) and self.x_cord <= consts.SCREEN_SIZE['w'] - consts.CANNON_ASSET[
                 'w'] - consts.CANNON_SCREEN_MARGIN:
-            self.x_cord = consts.SCREEN_SIZE['w'] - consts.CANNON_ASSET[
-                'w'] - consts.CANNON_SCREEN_MARGIN
-        else:
-            if pyxel.btn(pyxel.KEY_RIGHT) or pyxel.btn(pyxel.GAMEPAD_1_RIGHT):
-                self.x_cord += consts.CANNON_SPEED
+            self.x_cord += consts.CANNON_SPEED
 
     def launch_beam(self):
         ''' When SPACE is pressed and time from last laser beam's launch is

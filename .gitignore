@@ -2,3 +2,4 @@ __pycache__/
 *.pyc
 scores.json
 .DS_store
+.vscode/
